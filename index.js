@@ -16,10 +16,11 @@ The function should:
 */
 
 
-function createMenuItem(/*Your code here*/){
-  /*Your code here*/
-}
+function createMenuItem(name, price, category){
+  return {name, price, category};
 
+}
+console.log(createMenuItem('tacos', 8,'Lunch'));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -30,7 +31,11 @@ Test your createMenuItems function by doing the following:
   3. Log each returned object to the console  
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
-*/
+ */ 
+console.log(createMenuItem('pizza', 5, 'Lunch'));
+console.log(createMenuItem('waffles', 10, 'Brunch'));
+console.log(createMenuItem('chocolate milkshake', 6, 'Drinks'));
+
 
 
 
@@ -52,7 +57,15 @@ const burger = {
   price: 18, 
   category: "Lunch", 
   
+  discount: function(person){
+    if(person === 'teacher' || person === 'student'){
+      return this.price-(this.price * 0.25);
+    }else if(person === 'public'){
+      return this.price-(this.price * 0.10)
+    }
+  }
 }
+console.log(burger.discount('teacher'));
 
 
 
@@ -71,7 +84,7 @@ const reviews = [
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 (not auto-tested): 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
-*/
+*/console.log(reviews[5].feedback);
 
 
 
@@ -95,9 +108,6 @@ Use the addReview function below to do the following:
 */
 
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
-}
 
 
 
